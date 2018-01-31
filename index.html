@@ -17,63 +17,61 @@
         background-size: auto;
         margin: 0;
         padding: 0;
+        /*display: flex;*/
+        grid-template-rows: 10% 20% 20% 20% 30%;
     }
 
     div {
-        display: flex;
+        /*display: flex;*/
         justify-content: space-around;
         /*height: 100px;*/
     }
 
+    #firstRow, #secondRow, #thirdRow {
+        display: grid;
+
+    }
+
+    #firstRow {
+        grid-template-columns: repeat(auto-fill, 25%)
+    }
+
+    #secondRow {
+        grid-template-columns: repeat(auto-fill, 12%)
+    }
+
+    #thirdRow {
+        grid-template-columns: repeat(auto-fill, 12%)
+    }
+
     .title {
+        display: flex;
+        /*justify-content: space-around;*/
         margin-top: 100px;
+        font-size: 100px;
     }
 
     .photo {
         /*content: url("frames/frame.png");*/
-        box-sizing: border-box;
-        margin: 35px 0 ;
+        /*box-sizing: border-box;*/
+        /*margin: 35px 0 ;*/
         height: 12vh
         /*background-image: url(frames/frame.png);*/
     }
 
-    .title {
-        font-size: 100px;
-    }
-
 </style>
 <body>
-    <div class="title">
+    <div id="title">
         <div>BIG NONSENSE</div>
     </div>
 
-    <div class="firstRow">
-        <div></div>
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <div></div>
+    <div id="firstRow">
     </div>
 
-    <div class="secondRow">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
+    <div id="secondRow">
     </div>
 
-    <div class="thirdRow">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
-        <img src="frames/frame.png" class="photo">
+    <div id="thirdRow">
     </div>
 
     <div class="footer">
