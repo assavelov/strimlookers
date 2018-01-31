@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Elen</title>
+    <title>sadf</title>
 
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -10,11 +10,76 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
 </head>
 <style>
-    html, body {
-        background-image: url("wall.jpg");
+    body {
+        /*background: url(wall.jpg) no-repeat fixed center;*/
+        background-image: url(wall.jpg);
+        background-repeat: no-repeat;
+        background-size: auto;
+        margin: 0;
+        padding: 0;
     }
+
+    div {
+        display: flex;
+        justify-content: space-around;
+        /*height: 100px;*/
+    }
+
+    .title {
+        margin-top: 100px;
+    }
+
+    .photo {
+        /*content: url("frames/frame.png");*/
+        box-sizing: border-box;
+        margin: 35px 0 ;
+        height: 12vh
+        /*background-image: url(frames/frame.png);*/
+    }
+
+    .title {
+        font-size: 100px;
+    }
+
 </style>
 <body>
+    <div class="title">
+        <div>BIG NONSENSE</div>
+    </div>
+
+    <div class="firstRow">
+        <div></div>
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <div></div>
+    </div>
+
+    <div class="secondRow">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+    </div>
+
+    <div class="thirdRow">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+        <img src="frames/frame.png" class="photo">
+    </div>
+
+    <div class="footer">
+
+    </div>
+
     <script src="index.js"></script>
 </body>
 
