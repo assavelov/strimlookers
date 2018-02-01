@@ -13,32 +13,77 @@ window.wall ={}
 
 function start(loader, res) {
     wall.res = res
-    wall.items = new Item()
+    wall.items = []
+
+	for(let i = 0; i < 4; i++) {
+    	wall.items.push(new Item({
+			container: app.stage,
+			x: 250 * i + 500,
+			y: 200
+    	}))
+	}
+
+	for(let i = 0; i < 7; i++) {
+		wall.items.push(new Item({
+			container: app.stage,
+			x: 250 * i,
+			y: 400
+		}))
+	}
+
+	for(let i = 0; i < 7; i++) {
+		wall.items.push(new Item({
+			container: app.stage,
+			x: 250 * i,
+			y: 600
+		}))
+	}
+
+	addButton()
+}
+
+function addButton() {
+	button = PIXI.Sprite.fromImage('button.png');
+	app.stage.addChild(button);
+	button.interactive = true;
+	button.buttonMode = true;
+	button.x = 1200;
+	button.on('click', () => wall.items.forEach(item => item.hide()));
+	wall.button = button
 }
 
 class Item extends PIXI.Container{
-    constructor() {
-        super()
-        app.stage.addChild(this)
+    constructor({x = 0, y = 0,container}) {
+        super();
+        this.x = x;
+        this.y = y;
+        container.addChild(this);
+
         this.in = this.addSprite('in')
         this.out = this.addSprite('out')
+		this.emitter = this.addEmitter()
 
         this.out.interactive = true
 
-		this.emitter = this.addEmitter()
-
-		this.out.on('click', () => {
-			let a = this.out.alpha ? 0 : 1
-
-			TweenMax.to(this.out, 3, {
-			    alpha: a,
-                onStart: () => this.emitter.emit = true,
-                onComplete: () => this.emitter.emit = false,
-                ease: Power0.easeNone
-            })
-		})
-
+		this.out.on('click', this.hide, this)
     }
+
+    show() {
+		this.tween(1)
+	}
+
+	hide() {
+		this.tween(0)
+	}
+
+	tween(alpha) {
+		TweenMax.to(this.out, 2, {
+			alpha: alpha,
+			onStart: () => this.emitter.emit = true,
+			onComplete: () => this.emitter.emit = false,
+			ease: Power0.easeNone
+		})
+	}
 
     addSprite(name) {
         let sprite = new PIXI.Sprite(PIXI.utils.TextureCache[name]);
