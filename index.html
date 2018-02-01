@@ -8,76 +8,17 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport"         content="width=device-width, initial-scale=1">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/4.7.0/pixi.js"></script>
 </head>
 <style>
     body {
-        /*background: url(wall.jpg) no-repeat fixed center;*/
-        background-image: url(wall.jpg);
-        background-repeat: no-repeat;
-        background-size: auto;
         margin: 0;
         padding: 0;
-        /*display: flex;*/
-        grid-template-rows: 10% 20% 20% 20% 30%;
+        overflow: hidden;
     }
-
-    div {
-        /*display: flex;*/
-        justify-content: space-around;
-        /*height: 100px;*/
-    }
-
-    #firstRow, #secondRow, #thirdRow {
-        display: grid;
-
-    }
-
-    #firstRow {
-        grid-template-columns: repeat(auto-fill, 25%)
-    }
-
-    #secondRow {
-        grid-template-columns: repeat(auto-fill, 12%)
-    }
-
-    #thirdRow {
-        grid-template-columns: repeat(auto-fill, 12%)
-    }
-
-    .title {
-        display: flex;
-        /*justify-content: space-around;*/
-        margin-top: 100px;
-        font-size: 100px;
-    }
-
-    .photo {
-        /*content: url("frames/frame.png");*/
-        /*box-sizing: border-box;*/
-        /*margin: 35px 0 ;*/
-        height: 12vh
-        /*background-image: url(frames/frame.png);*/
-    }
-
 </style>
 <body>
-    <div id="title">
-        <div>BIG NONSENSE</div>
-    </div>
-
-    <div id="firstRow">
-    </div>
-
-    <div id="secondRow">
-    </div>
-
-    <div id="thirdRow">
-    </div>
-
-    <div class="footer">
-
-    </div>
-
+    <script src="pixi-particles.js"></script>
     <script src="index.js"></script>
 </body>
 
