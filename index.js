@@ -29,26 +29,26 @@ PIXI.loader
 
 let coords = [
 	[],
-	{x: 289, y: 182, scale: 0.3},
-	{x: 653, y: 210, scale: 0.9},
-	{x: 912, y: 224, scale: 0.7},
-	{x: 1289, y: 206, scale: 0.7},
+	{x: 289, y: 182, scale: 1},
+	{x: 653, y: 210, scale: 1},
+	{x: 912, y: 224, scale: 1},
+	{x: 1289, y: 206, scale: 1},
 
 	{x: 17, y: 400, scale: 1},
-	{x: 259, y: 473, scale: 0.7},
+	{x: 259, y: 473, scale: 1},
 	{x: 579, y: 490, scale: 1},
-	{x: 819, y: 522, scale: 0.5},
+	{x: 819, y: 522, scale: 1},
 	{x: 1072, y: 483, scale: 1},
 	{x: 1389, y: 489, scale: 1},
-	{x: 1655, y: 505, scale: 0.7},
+	{x: 1655, y: 505, scale: 1},
 
     {x: 34, y: 755, scale: 1},
-    {x: 296, y: 750, scale: 0.6},
+    {x: 296, y: 750, scale: 1},
     {x: 589, y: 789, scale: 1},
-    {x: 813, y: 740, scale: 0.8},
-    {x: 1050, y: 755, scale: 0.6},
-    {x: 1329, y: 781, scale: 0.5},
-    {x: 1607, y: 803, scale: 0.8},
+    {x: 813, y: 740, scale: 1},
+    {x: 1050, y: 755, scale: 1},
+    {x: 1329, y: 781, scale: 1},
+    {x: 1607, y: 803, scale: 1},
 	]
 window.wall ={}
 
