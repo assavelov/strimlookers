@@ -145,7 +145,7 @@ function addButton() {
 	button.x = 1750;
 	button.y = 50;
 	let counter = 0;
-	button.on('click', () => {
+	button.on('pointertap', () => {
 		wall.items.forEach(item => {
             item.tween(counter % 2)
         })
