@@ -168,7 +168,7 @@ class Item extends PIXI.Container{
 		this.emitter = this.addEmitter();
         this.out.interactive = true;
 
-		this.out.on('click', () => {
+		this.out.on('pointertap', () => {
 			let alpha = this.out.alpha ? 0 : 1
 			this.tween(alpha)
 		})
