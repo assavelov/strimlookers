@@ -69,6 +69,74 @@ function start(loader, res) {
 	addButton()
 }
 
+
+addMouseEmitter()
+function addMouseEmitter() {
+        let emitter = new pixiParticles.Emitter(
+            app.stage,
+            [PIXI.Texture.fromImage('particle.png')],
+            {
+                "alpha": {
+                    "start": 1,
+                    "end": 0
+                },
+                "scale": {
+                    "start": 0.1,
+                    "end": 0.01,
+                    "minimumScaleMultiplier": 1
+                },
+                "color": {
+                    "start": "#e4f9ff",
+                    "end": "#3fcbff"
+                },
+                "speed": {
+                    "start": 200,
+                    "end": 50,
+                    "minimumSpeedMultiplier": 1
+                },
+                "acceleration": {
+                    "x": 0,
+                    "y": 0
+                },
+                "maxSpeed": 0,
+                "startRotation": {
+                    "min": 0,
+                    "max": 360
+                },
+                "noRotation": false,
+                "rotationSpeed": {
+                    "min": 0,
+                    "max": 0
+                },
+                "lifetime": {
+                    "min": 0.2,
+                    "max": 0.8
+                },
+                "blendMode": "normal",
+                "frequency": 0.001,
+                "emitterLifetime": -1,
+                "maxParticles": 500,
+                "pos": {
+                    "x": 0,
+                    "y": 0
+                },
+                "addAtBack": false,
+                "spawnType": "circle",
+                "spawnCircle": {
+                    "x": 0,
+                    "y": 0,
+                    "r": 0
+                }
+            }
+        );
+
+        emitter.autoUpdate = true;
+        // emitter.emit = false;
+
+		app.stage.interactive = true
+		app.stage.on('pointermove', (e) => emitter.updateOwnerPos(e.data.global.x, e.data.global.y))
+}
+
 function addButton() {
 	button = PIXI.Sprite.fromImage('button.png');
 	app.stage.addChild(button);
